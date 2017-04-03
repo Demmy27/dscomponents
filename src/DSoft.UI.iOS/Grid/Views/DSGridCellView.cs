@@ -594,10 +594,10 @@ namespace DSoft.UI.Grid.Views
 					if (iOSHelper.IsiOS7)
 						aView.TintColor = GridView.Theme.HeaderTextForeground.ToUIColor ();
 
-					var aLeft = this.Bounds.Width - 22;
-					var atop = (this.Bounds.Height / 2) - 5;
+          var aLeft = this.Bounds.Width - aView.Image.Size.Width;
+          var atop = (this.Bounds.Height - aView.Image.Size.Height)/2;
 					
-					aView.Frame = new CGRect (aLeft, atop, 16, 8).Integral ();
+					aView.Frame = new CGRect (aLeft, atop, aView.Image.Size.Width, aView.Image.Size.Height).Integral ();
 					
 					this.AddSubview (aView);
 				}
