@@ -191,10 +191,14 @@ namespace DSoft.Datatypes.Grid.Shared
 						cellInfo.x = posX;
 						cellInfo.Formatter = col.Formatter;
 
-						if (col.IsSortColumn)
-						{
-							cellInfo.SortStyle = (col.UseDescendingSort) ? SortIndicatorStyle.Descending : SortIndicatorStyle.Ascending;
-						}
+            if (col.IsSortColumn)
+            {
+              cellInfo.SortStyle = (col.UseDescendingSort) ? SortIndicatorStyle.Descending : SortIndicatorStyle.Ascending;
+            }
+            else
+            { 
+              cellInfo.SortStyle = (col.AllowSort) ? SortIndicatorStyle.Default : SortIndicatorStyle.None;
+            }
 
 						cellInfo.Name = col.ColumnName;
 

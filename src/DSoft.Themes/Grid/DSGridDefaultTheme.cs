@@ -21,6 +21,7 @@ namespace DSoft.Themes.Grid
 
 		private DSBitmap mUpSortIndicator;
 		private DSBitmap mDownSortIndicator;
+    private DSBitmap mDefaultSortIndicator;
 		private float mBorderWidth = 2.0f;
 		private float mHeaderHeight = 44.0f;
 		private float mCellBorderWidth = 0.5f;
@@ -248,6 +249,22 @@ namespace DSoft.Themes.Grid
 				mDownSortIndicator = value;
 			}
 		}
+
+    /// <summary>
+    /// Gets the UIImage to use for the default sort indicator
+    /// </summary>
+    /// <value>UIImage</value>
+    public override DSBitmap HeaderSortIndicatorDefault
+    {
+      get
+      {
+        return mDefaultSortIndicator;
+      }
+      set
+      {
+        mDefaultSortIndicator = value;
+      }
+    }
 
 		#endregion
 

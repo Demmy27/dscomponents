@@ -8,6 +8,7 @@
 using System;
 using DSoft.Datatypes.UI.Interfaces;
 using DSoft.Datatypes.Types;
+using DSoft.Datatypes.Enums;
 
 
 #if __UNIFIED__
@@ -38,6 +39,7 @@ namespace DSComponentsSample.Views
 		#region Fields
 
 		private UITextField mTextField;
+    private CellStyle mStyle;
 		private Action<object> mUpdateAction;
 
 		#endregion
@@ -89,9 +91,26 @@ namespace DSComponentsSample.Views
 			}
 			set
 			{
-				mTextField.Enabled = !value;
+        mTextField.Enabled = !value && Style != CellStyle.Header;
 			}
 		}
+
+    /// <summary>
+    /// Gets or sets the style.
+    /// </summary>
+    /// <value>The style.</value>
+    public CellStyle Style
+    {
+      get
+      {
+        return mStyle;
+      }
+
+      set
+      {
+        mStyle = value;
+      }
+    }
 
 		/// <summary>
 		/// Gets or sets the update action.

@@ -304,7 +304,7 @@ namespace DSoft.UI.Grid.Views
 					if (!(aView is UIView))
 						throw new Exception ("DSViewFormatter has type that isn't a UIView");
 
-
+          aView.Style = Processor.Style;
 					aView.Value = Processor.ValueObject.Value;
 					var aFrame = rect;
 
@@ -573,9 +573,25 @@ namespace DSoft.UI.Grid.Views
 			{
 				
 				//draw the up indicator
-				var anImage = (Processor.SortStyle == SortIndicatorStyle.Ascending) ? GridView.Theme.HeaderSortIndicatorUp : 
-			                  GridView.Theme.HeaderSortIndicatorDown;
+        DSBitmap anImage;
 
+        switch (Processor.SortStyle)
+        {
+          case SortIndicatorStyle.Ascending:
+            anImage = GridView.Theme.HeaderSortIndicatorUp;
+            break;
+
+          case SortIndicatorStyle.Descending:
+            anImage = GridView.Theme.HeaderSortIndicatorDown;
+            break;
+
+          case SortIndicatorStyle.Default:
+            anImage = GridView.Theme.HeaderSortIndicatorDefault;
+            break;
+          default:
+            anImage = null;
+            break;
+        }
 
 				if (anImage != null)
 				{

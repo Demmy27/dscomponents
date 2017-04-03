@@ -133,6 +133,12 @@ namespace DSoft.Themes.Grid
 		/// <value>UIImage</value>
 		public abstract DSBitmap HeaderSortIndicatorDown { get; set; }
 
+    /// <summary>
+    /// Gets the UIImage to use for the default sort indicator
+    /// </summary>
+    /// <value>UIImage</value>
+    public abstract DSBitmap HeaderSortIndicatorDefault { get; set; }
+
 		#endregion
 
 		#region Cell Properties

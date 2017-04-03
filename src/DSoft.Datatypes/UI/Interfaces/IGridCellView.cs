@@ -6,6 +6,7 @@
 // ****************************************************************************
 
 using System;
+using DSoft.Datatypes.Enums;
 using DSoft.Datatypes.Types;
 
 namespace DSoft.Datatypes.UI.Interfaces
@@ -32,6 +33,11 @@ namespace DSoft.Datatypes.UI.Interfaces
 		/// </summary>
 		/// <value><c>true</c> if this instance is read only; otherwise, <c>false</c>.</value>
 		bool IsReadOnly { get; set; }
+
+    /// <summary>
+    /// The style of the cell
+    /// </summary>
+    CellStyle Style { get; set; }
 
 		/// <summary>
 		/// Gets or sets the update action.

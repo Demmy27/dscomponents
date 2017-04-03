@@ -277,7 +277,11 @@ namespace DSoft.Datatypes.Enums
 		/// <summary>
 		/// Descending
 		/// </summary>
-		Descending
+		Descending,
+    /// <summary>
+    /// Default.
+    /// </summary>
+    Default
 	}
 
 	/// <summary>
