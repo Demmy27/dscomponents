@@ -78,6 +78,15 @@ namespace DSoft.Datatypes.Grid.Shared
 		/// </summary>
 		public bool IsOdd;
 
+    /// <summary>
+    /// Toggle row highlighting
+    /// </summary>
+    public bool ShowSelection
+    {
+      get;
+      set;
+    }
+
 		/// <summary>
 		/// gets if the cell is selected
 		/// </summary>

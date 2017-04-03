@@ -481,6 +481,7 @@ namespace DSoft.UI.Grid
 				if (mProcessor == null)
 				{
 					mProcessor = new DSGridProcessor();
+          mProcessor.ShowSelection = ShowSelection;
 					mProcessor.ThemeRowHeight = ()=>
 					{
 						return Theme.RowHeight;

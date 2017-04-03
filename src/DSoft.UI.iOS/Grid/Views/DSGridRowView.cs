@@ -156,6 +156,7 @@ namespace DSoft.UI.Grid.Views
 				cell.Frame = aRect.Integral ();
 
 				cell.Processor.IsSelected = Processor.IsSelected;
+        cell.Processor.ShowSelection = Processor.ShowSelection;
 				cell.Processor.IsReadOnly = cel.IsReadOnly;
 
 				//work out the position style

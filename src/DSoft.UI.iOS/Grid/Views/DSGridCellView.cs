@@ -200,10 +200,9 @@ namespace DSoft.UI.Grid.Views
 					break;
 				case CellStyle.Cell:
 					{
-						if (Processor.IsSelected)
+						if (Processor.ShowSelection && Processor.IsSelected)
 						{
 							GridView.Theme.CellBackgroundHighlight.ToUIColor ().SetFill ();
-
 						}
 						else
 						{
@@ -397,7 +396,7 @@ namespace DSoft.UI.Grid.Views
 						                 : GridView.Theme.CellTextForeground.ToUIColor ();
 							var aColor = (Processor.IsOdd) ? GridView.Theme.CellTextForeground.ToUIColor () : alterColor;
 		
-							label.TextColor = (Processor.IsSelected) ? GridView.Theme.CellTextHighlight.ToUIColor () : aColor;
+							label.TextColor = (Processor.ShowSelection && Processor.IsSelected) ? GridView.Theme.CellTextHighlight.ToUIColor () : aColor;
 		
 							label.TextAlignment = (UITextAlignment)boolFormatter.TextAlignment;
 						}
@@ -491,7 +490,7 @@ namespace DSoft.UI.Grid.Views
 						var alterColor = (GridView.Theme.CellTextForeground2 != null) ? GridView.Theme.CellTextForeground2.ToUIColor () : GridView.Theme.CellTextForeground.ToUIColor ();
 						var aColor = (Processor.IsOdd) ? GridView.Theme.CellTextForeground.ToUIColor () : alterColor;
 	
-						label.TextColor = (Processor.IsSelected) ? GridView.Theme.CellTextHighlight.ToUIColor () : aColor;
+						label.TextColor = (Processor.ShowSelection && Processor.IsSelected) ? GridView.Theme.CellTextHighlight.ToUIColor () : aColor;
 	
 						var textAlignment = GridView.Theme.CellContentAlignment;
 

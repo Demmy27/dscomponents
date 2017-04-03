@@ -97,6 +97,15 @@ namespace DSoft.Datatypes.Grid.Shared
 			}
 		}
 
+    /// <summary>
+    /// Toggle row highlighting
+    /// </summary>
+    public bool ShowSelection
+    {
+      get;
+      set;
+    }
+
 		/// <summary>
 		/// Gets the index of the row.
 		/// </summary>

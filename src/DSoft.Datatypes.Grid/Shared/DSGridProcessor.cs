@@ -41,6 +41,14 @@ namespace DSoft.Datatypes.Grid.Shared
 
 		#region Properties
 
+    /// <summary>
+    /// Toggle row highlighting
+    /// </summary>
+    public bool ShowSelection
+    {
+      get;
+      set;
+    }
 
 		/// <summary>
 		/// Gets the rows.
@@ -733,6 +741,7 @@ namespace DSoft.Datatypes.Grid.Shared
 
 				//
 				aRow.Processor.Style = CellStyle.Cell;
+        aRow.Processor.ShowSelection = ShowSelection;
 
 				//add to collection
 				Rows.Add (aRow);
